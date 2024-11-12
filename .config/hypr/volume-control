@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Function to send notification using swaync
+send_notification() {
+  volume=$(pamixer --get-volume)
+
+  # Create the progress bar
+  # bar=$(seq -s "━" $(($volume / 5)) | sed 's/[0-9]//g')
+  # empty=$(seq -s "─" $((20 - $volume / 5)) | sed 's/[0-9]//g')
+
+  if [[ $(pamixer --get-mute) == "true" ]]; then
+    notify-send "Volume Muted" \
+      -h string:synchronous:volume \
+      -h "int:value:$volume" \
+      -h string:x-canonical-private-synchronous:volume \
+      -u low
+    #"[$bar$empty] ${volume}%"
+  else
+    notify-send "Volume" \
+      -h string:synchronous:volume \
+      -h "int:value:$volume" \
+      -h string:x-canonical-private-synchronous:volume \
+      -u low
+    #"[$bar$empty] ${volume}%"
+  fi
+}
+
+case $1 in
+up)
+  pamixer -u
+  pamixer -i 5
+  send_notification
+  ;;
+down)
+  pamixer -u
+  pamixer -d 5
+  send_notification
+  ;;
+mute)
+  pamixer -t
+  send_notification
+  ;;
+esac
