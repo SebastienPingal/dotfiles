@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+export PATH="$PATH:/home/jupiter/.cargo/bin"
 
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

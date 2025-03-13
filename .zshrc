@@ -3,7 +3,6 @@
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -70,7 +69,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git 
+  zsh-fzf-history-search
+  node
+docker
+ zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,10 +120,19 @@ function y() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cursor='/opt/cursor.appimage'
-alias cd='cd'
+alias cd='z'
+alias pp='pnpm'
+alias n='nvim'
+alias s='sudo'
+alias i='yay -S'
 
+alias upd='yay -Syu'
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export XDG_DATA_DIRS=/usr/share:/usr/local/share

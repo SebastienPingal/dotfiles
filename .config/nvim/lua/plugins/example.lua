@@ -9,6 +9,22 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  {
+    "svermeulen/vim-yank",
+    config = function()
+      -- Copy yanked text to system clipboard
+      vim.opt.clipboard = "unnamedplus"
+    end,
+  },
+
+  -- (Optional) Copy selected text to system clipboard
+  {
+    "kevinhwang91/nvim-ufo",
+    keys = {
+      { "y", '"+y', mode = "v" },
+      { "p", '"+p', mode = "v" },
+    },
+  },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
@@ -16,7 +32,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "catppuccin",
     },
   },
 
