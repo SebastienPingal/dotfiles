@@ -75,6 +75,7 @@ plugins=(
   node
 docker
  zsh-syntax-highlighting
+ asdf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,9 +123,11 @@ function y() {
 
 alias cd='z'
 alias pp='pnpm'
+alias ppd='pnpm dev'
+alias ppi='pnpm i'
 alias n='nvim'
 alias s='sudo'
-alias i='yay -S'
+alias i='yay -Sy'
 
 alias upd='yay -Syu'
 
@@ -136,3 +139,23 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export XDG_DATA_DIRS=/usr/share:/usr/local/share
+
+# pnpm
+export PNPM_HOME="/home/jupiter/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+
+export PATH="$HOME/go/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

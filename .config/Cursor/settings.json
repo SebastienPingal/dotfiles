@@ -1,0 +1,110 @@
+{
+  "window.commandCenter": 1,
+  "workbench.colorTheme": "GitHub Light",
+  "npm.packageManager": "pnpm",
+//   "editor.fontFamily": "DankMono Nerd Font",
+  "editor.fontFamily": "Gintronic",
+  "json.schemas": [
+
+  ],
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": true,
+  "editor.minimap.enabled": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "color-highlight.markRuler": false,
+  "breadcrumbs.enabled": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "explorer.openEditors.visible": 0,
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.indentation": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.glyphMargin": false,
+  "editor.lineNumbers": "off",
+  "editor.showFoldingControls": "never",
+  "window.menuBarVisibility": "toggle",
+  "workbench.layoutControl.type": "menu",
+  "workbench.layoutControl.enabled": false,
+  "window.title": " ",
+  "editor.guides.bracketPairs": true,
+  "workbench.activityBar.location": "hidden",
+  "vim.leader" : "<space>",
+  "vim.normalModeKeyBindings": [
+      {
+          "before": ["<leader>", "p"],
+          "commands": [
+              "workbench.action.quickOpen"
+          ]
+      },
+      {
+          "before": ["<leader>", "f"],
+          "commands": [
+              "editor.action.formatDocument"
+          ]
+      }
+  ],
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+},
+"cursor.cpp.enablePartialAccepts": true,
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 200,
+"git.autofetch": true,
+"git.confirmSync": false,
+"git.enableSmartCommit": true,
+"diffEditor.ignoreTrimWhitespace": false,
+"workbench.iconTheme": "material-icon-theme",
+"glassit.alpha": 230,
+"explorer.confirmDelete": false,
+"editor.tabSize": 2,
+"typescript.updateImportsOnFileMove.enabled": "always",
+"cursor.cmdk.useThemedDiffBackground": true,
+"cursor.diffs.useCharacterLevelDiffs": true,
+"cursor.composer.renderPillsInsteadOfBlocks": true,
+"settings.cycle": [{
+    "id": "lineNumbers",
+    "values":[
+        {
+            "editor.lineNumbers": "off",
+        },
+        {
+            "editor.lineNumbers": "on",
+        }
+    ]
+}
+],
+"explorer.confirmDragAndDrop": false,
+"[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+},
+"javascript.updateImportsOnFileMove.enabled": "always",
+"cursor.cpp.disabledLanguages": [
+    "plaintext"
+],
+"eslint.format.enable": true,
+"eslint.useFlatConfig": true,
+"[javascript]": {
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+},
+"[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+},
+"cursor.composer.shouldAutoAcceptDiffs": false,
+"[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+},
+"[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+},
+"diffEditor.hideUnchangedRegions.enabled": true,
+"diffEditor.renderSideBySide": true,
+}

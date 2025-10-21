@@ -1,0 +1,57 @@
+[
+    {
+        "key": "alt+j",
+        "command": "editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-editor.action.marker.next",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "aichat.newchataction"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-aichat.newchataction"
+    },
+    {
+        "key": "alt+tab",
+        "command": "editor.action.inlineSuggest.acceptNextWord",
+        "when": "cppSuggestion && !editorReadonly || inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-editor.action.inlineSuggest.acceptNextWord",
+        "when": "cppSuggestion && !editorReadonly || inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "settings.cycle.lineNumbers",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "composerMode.agent"
+    }
+]
